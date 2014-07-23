@@ -1,0 +1,13 @@
+Create:<%= link_to 'Users', users_path%></li>
+Create:<%= link_to 'point_line_items', point_line_items_path%></li>
+<br>
+<%= link_to "expire point of the current dayy", {:controller => "point_expirer", :action => "expire", :date => Time.now }%>
+<br>
+or set date
+<br>
+<%= form_tag "/point_expirer/expire" do %>
+    <label for="date"> "31-01-2010"</label>
+    <%= text_field_tag :date %>
+    <%= submit_tag "Submit" %>
+<% end %>
+

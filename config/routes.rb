@@ -1,4 +1,11 @@
 SoftGroupTest::Application.routes.draw do
+  root 'point_line_items#index'
+  post "point_expirer/expire"
+  get "point_expirer/expire"
+  resources :point_line_items
+
+  resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
